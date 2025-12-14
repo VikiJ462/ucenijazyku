@@ -40,6 +40,8 @@
 * Dům - House
 * Obchod - Shop
 
+###### [Procvičování angličtiny](anjprocvicovani.html)
+
 ### Islandština
 
 * Ahoj - Halló

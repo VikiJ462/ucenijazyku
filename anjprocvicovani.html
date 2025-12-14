@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Procvičování angličtiny</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      background: #1e1e1e;
+      padding: 30px;
+      border-radius: 12px;
+      width: 350px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    .cz {
+      font-size: 28px;
+      margin: 20px 0;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: none;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background: #3b82f6;
+      color: white;
+    }
+    button:hover {
+      background: #2563eb;
+    }
+    .result {
+      margin-top: 15px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Procvičování 🇨🇿➡🇬🇧</h1>
+    <div class="cz" id="czWord"></div>
+    <input type="text" id="answer" placeholder="Napiš anglicky...">
+    <button onclick="check()">Zkontrolovat</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    const words = [
+      { cz: "Ahoj", en: "hi" },
+      { cz: "Dobrý den", en: "hello" },
+      { cz: "Jedna", en: "one" },
+      { cz: "Dva", en: "two" },
+      { cz: "Tři", en: "three" },
+      { cz: "Čtyři", en: "four" },
+      { cz: "Pět", en: "five" },
+      { cz: "Šest", en: "six" },
+      { cz: "Sedm", en: "seven" },
+      { cz: "Osm", en: "eight" },
+      { cz: "Devět", en: "nine" },
+      { cz: "Deset", en: "ten" },
+      { cz: "Jídlo", en: "food" },
+      { cz: "Ovoce", en: "fruits" },
+      { cz: "Jablko", en: "apple" },
+      { cz: "Zelenina", en: "vegetables" },
+      { cz: "Mrkev", en: "carrot" },
+      { cz: "Věc", en: "thing" },
+      { cz: "Počítač", en: "computer" },
+      { cz: "Monitor", en: "monitor" },
+      { cz: "Klávesnice", en: "keyboard" },
+      { cz: "Myš", en: "mouse" },
+      { cz: "Sloveso", en: "verb" },
+      { cz: "Jíst", en: "eat" },
+      { cz: "Jím", en: "i am eating" },
+      { cz: "Chodit", en: "walk" },
+      { cz: "Jdu", en: "i am walking" },
+      { cz: "Budova", en: "building" },
+      { cz: "Škola", en: "school" },
+      { cz: "Dům", en: "house" },
+      { cz: "Obchod", en: "shop" }
+    ];
+
+    let current;
+
+    function newWord() {
+      current = words[Math.floor(Math.random() * words.length)];
+      document.getElementById("czWord").textContent = current.cz;
+      document.getElementById("answer").value = "";
+      document.getElementById("result").textContent = "";
+    }
+
+    function check() {
+      const input = document.getElementById("answer").value.trim().toLowerCase();
+      if (input === current.en) {
+        document.getElementById("result").textContent = "✅ Správně!";
+        setTimeout(newWord, 800);
+      } else {
+        document.getElementById("result").textContent = "❌ Špatně. Správně: " + current.en;
+      }
+    }
+
+    newWord();
+  </script>
+</body>
+</html>
