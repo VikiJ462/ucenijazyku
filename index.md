@@ -40,7 +40,7 @@
 * Dům - House
 * Obchod - Shop
 
-###### [Procvičování angličtiny](anjprocvicovani.html)
+#### [Procvičování angličtiny](anjprocvicovani.html)
 
 ### Islandština
 
@@ -82,3 +82,21 @@
 * Osm - Ocho
 * Devět - Nueve
 * Deset - Diez
+
+#### Ruština
+
+* Ahoj - Привет \[Privět]
+* Dobrý den - Здравствуйте \[Zdrástvujtě]
+* Ano - Да \[Da]
+* Ne - Нет \[Niet]
+* Jak se máš? - Как дела? \[Kak děla?]
+* Jedna - Один \[Odin]
+* Dva - Два \[Dva]
+* Tři - Три \[Tri]
+* Čtyři - Четыре \[Četyrě]
+* Pět - Пять \[Pjať]
+* Šest - Шесть \[Šesť]
+* Sedm - Семь \[Sem]
+* Osm - Восемь \[Vosem]
+* Devět - Девять \[Devjať]
+* Deset - Десять \[Desjať]
